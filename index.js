@@ -9,8 +9,11 @@ const port = process.env.PORT || 4000;
 //habilitar PUG
 app.set('view engine', 'pug');
 
+//definir la carpeta publica 
+app.use(express.static('public'));
+
 //agregamos router
-app.use('/', router)
+app.use('/', router);
 
 app.listen(port, ()=>{
     console.log(`El servidor esta funcionando en el puerto ${port}`);
