@@ -9,6 +9,12 @@ const port = process.env.PORT || 4000;
 //habilitar PUG
 app.set('view engine', 'pug');
 
+//obtener el anio actual
+app.use( (req, res)=>{
+    
+
+})
+
 //definir la carpeta publica 
 app.use(express.static('public'));
 
