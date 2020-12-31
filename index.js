@@ -10,10 +10,6 @@ const port = process.env.PORT || 4000;
 app.set('view engine', 'pug');
 
 //obtener el anio actual
-app.use( (req, res)=>{
-    
-
-})
 
 //definir la carpeta publica 
 app.use(express.static('public'));
