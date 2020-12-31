@@ -3,4 +3,35 @@ extends ./layout/index.pug
 block contenido 
    main.container.mt-5
         .row
-            h1=pagina
+            .col-md-5
+                 img(src="/img/nosotros.jpg", alt="nosotros", class="img-fluid")
+            
+            .col-md-7
+              h1 #{pagina}
+              blockquote ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin erat justo, ut porttitor odio aliquet ac. Fusce vestibulum tempus lacus vitae lobortis. Mauris tincidunt, est sit amet dictum congue, metus libero rutrum velit, id pharetra nisl ante convallis lacus. Mauris quam eros, tincidunt et est sed, vestibulum aliquet velit. Fusce sapien arcu, vehicula at nunc in, lacinia fringilla diam. Etiam a gravida risus. 
+
+                p erat nibh, sollicitudin ac purus in, hendrerit vestibulum augue. Integer at eros eget purus fringilla pulvinar. Quisque id tristique augue. Etiam vitae mi ultricies, viverra nibh quis, consequat sapien. Phasellus a consequat magna, ut pellentesque mi. In eros purus, venenatis nec orci bibendum, tristique consectetur justo. Pellentesque iaculis at dui eu aliquam. Sed et consequat urna, ac bibendum nunc.
+
+                p efficitur nisi in tincidunt pulvinar. Curabitur velit elit, varius quis dignissim vel, molestie quis ante. Donec ac est congue, faucibus ligula at, varius elit. Proin aliquam tincidunt lacus, vel lacinia arcu molestie non. Pellentesque euismod sem turpis, non hendrerit metus dignissim ut. Proin placerat lacus justo, vitae dignissim orci iaculis eu. Aliquam in blandit metus. 
+   .listado-iconos
+    .container.mt-5.py-5.text-center
+        .row
+            .col-md-4
+                img(src="/img/icono_seguridad.svg", alt="icono seguridad", class="img-fluid mb-4")
+                h2.mb-4 Seguridad
+                p tincidunt lacus, vel lacinia arcu molestie non. Pellentesque euismod sem turpis, non hendrerit metus dignissim ut. Proin placerat lacus justo, vitae dignissim orci iaculis eu. Aliquam in blandit metus. 
+
+            .col-md-4
+                img(src="/img/icono_destinos.svg", alt="icono destino", class="img-fluid mb-4")
+                h2.mb-4 Mejores Destino
+                p tincidunt lacus, vel lacinia arcu molestie non. Pellentesque euismod sem turpis, non hendrerit metus dignissim ut. Proin placerat lacus justo, vitae dignissim orci iaculis eu. Aliquam in blandit metus. 
+
+            .col-md-4
+                img(src="/img/icono_precios.svg", alt="icono precios", class="img-fluid mb-4")
+                h2.mb-4 Los mejores precios
+                p tincidunt lacus, vel lacinia arcu molestie non. Pellentesque euismod sem turpis, non hendrerit metus dignissim ut. Proin placerat lacus justo, vitae dignissim orci iaculis eu. Aliquam in blandit metus. 
+
+
+
+
+                
