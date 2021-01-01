@@ -1,12 +1,12 @@
 import  express from 'express';
 import router from './routes/index.js';
-import db from './config/db';
+import db  from './config/db.js';
 
 
 const app = express();
 
 
-//conectar la base de datos
+//conectar la db de datos
 db.authenticate()
     .then(()=> console.log('Base de datos conectada Exitosamente'))
     .catch(error=> console.log(error));
