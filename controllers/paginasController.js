@@ -21,7 +21,7 @@ const paginaViajes = async (req, res)=>{ // req lo que estamos enviando || res l
     console.log(viaje);
     
     res.render ('viajes', {
-        pagina: 'Viajes',
+        pagina: 'Proximos Viajes',
         viaje,
     });
      
@@ -34,9 +34,26 @@ const paginaTestimoniales = (req, res)=>{ // req lo que estamos enviando || res 
      
 }
 
+//muestra el slug
+const paginaDetalleViajes = async (req, res) =>{
+    const  {slug} = req.params
+
+    try {
+        const viaje = await Viajes.findOne({where :{slug  }})
+        res.render('viaje',{
+            pagina: ' Informacion viaje ',
+            viaje
+        })
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+
 export {
     paginaInicio,
     paginaNosotros,
     paginaViajes,
-    paginaTestimoniales
+    paginaTestimoniales,
+    paginaDetalleViajes
 }
