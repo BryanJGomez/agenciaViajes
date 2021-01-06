@@ -26,6 +26,14 @@ app.use((req, res, next)=>{
 
    return next();
 })
+
+
+//agregar body parse para leer los datos del fomrulario
+app.use(express.urlencoded({extended: true}))
+
+
+
+
 //definir la carpeta publica 
 app.use(express.static('public'));
 
