@@ -1,11 +1,30 @@
-import {Viajes} from '../Models/Viajes.js';
+import {Viaje} from '../Models/Viajes.js';
 import {Testimonial} from '../Models/testimoniales.js';
 
-const paginaInicio = (req, res)=>{ // req lo que estamos enviando || res lo que express nos responde
+const paginaInicio = async (req, res)=>{ // req lo que estamos enviando || res lo que express nos responde
+
+    //consultar 3 viajes  del modelo vista
+    const promiseDB = [];
+
+    promiseDB.push(Viaje.findAll({limit: 3}));
+    promiseDB.push(Testimonial.findAll({limit: 3}));
+
+    try {
+        const resultado = await Promise.all(promiseDB);
+        
+
     res.render('inicio',{
-        pagina: 'Inicio'
+        pagina: 'Inicio',
+        clase: 'home',
+        viajes:resultado [0],
+        testimoniales: resultado[1]
     });
      
+
+    } catch (error) {
+        console.log(error);
+    }
+
 }
 
 const paginaNosotros =(req, res)=>{ // req lo que estamos enviando || res lo que express nos responde
@@ -17,12 +36,12 @@ const paginaNosotros =(req, res)=>{ // req lo que estamos enviando || res lo que
 
 const paginaViajes = async (req, res)=>{ // req lo que estamos enviando || res lo que express nos responde
     //consultar BD
-    const viaje = await Viajes.findAll();
-    console.log(viaje);
+    const viajes = await Viaje.findAll();
+    console.log(viajes);
     
     res.render ('viajes', {
         pagina: 'Proximos Viajes',
-        viaje,
+        viajes,
     });
      
 }
@@ -45,10 +64,10 @@ const paginaDetalleViajes = async (req, res) =>{
     const  {slug} = req.params
 
     try {
-        const viaje = await Viajes.findOne({where :{slug  }})
+        const viajes = await Viaje.findOne({where :{slug  }})
         res.render('viaje',{
             pagina: ' Informacion viaje ',
-            viaje
+            viajes
         })
     } catch (error) {
         console.log(error);

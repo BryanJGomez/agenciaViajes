@@ -3,7 +3,7 @@ import db from '../config/db.js';
 
 
 //aqui se define el apartado de tus tablas de base de datos
-export const Viajes = db.define('viajes',{
+export const Viaje = db.define('viajes',{
     titulo: {
         type: Sequelize.STRING
     },
