@@ -2,7 +2,7 @@ import Sequelize from 'sequelize';
 
 
 // console.log(process.env.BD_NOMBRE);
-const db = new Sequelize('agenciaViajes', 'bryanJ', 'bryan98Gomez',{
+const db = new Sequelize('agenciaviajes', 'bryanJ', 'bryan98Gomez',{
         
     host: 'localhost',
     port: '3306',
