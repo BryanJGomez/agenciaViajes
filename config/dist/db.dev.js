@@ -7,18 +7,12 @@ exports["default"] = void 0;
 
 var _sequelize = _interopRequireDefault(require("sequelize"));
 
-var _dotenv = _interopRequireDefault(require("dotenv"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-_dotenv["default"].config({
-  path: "variables.env"
-}); // console.log(process.env.BD_NOMBRE);
-
-
-var db = new _sequelize["default"](process.env.BD_NOMBRE, process.env.BD_USER, process.env.BD_PASS, {
-  host: process.env.BD_HOST,
-  port: process.env.BD_PORT,
+// console.log(process.env.BD_NOMBRE);
+var db = new _sequelize["default"]('agenciaViajes', 'root', 'bryangomez2021', {
+  host: 'captain.servicios.saynets.com',
+  port: '6969',
   dialect: 'mysql',
   define: {
     timestamps: false
