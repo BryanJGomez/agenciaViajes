@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server",
-    "start": "node ./index.php"
+    "start": "node ./index.js"
   },
   "type": "module",
   "author": "bryan gomez",
