@@ -13,7 +13,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 _dotenv["default"].config({
   path: "variables.env"
-});
+}); // console.log(process.env.BD_NOMBRE);
+
 
 var db = new _sequelize["default"](process.env.BD_NOMBRE, process.env.BD_USER, process.env.BD_PASS, {
   host: process.env.BD_HOST,
