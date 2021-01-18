@@ -10,9 +10,9 @@ var _sequelize = _interopRequireDefault(require("sequelize"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // console.log(process.env.BD_NOMBRE);
-var db = new _sequelize["default"]('agenciaViajes', 'root', 'bryangomez2021', {
-  host: 'captain.servicios.saynets.com',
-  port: '6969',
+var db = new _sequelize["default"]('agenciaViajes', 'bryanJ', 'bryan98Gomez', {
+  host: 'localhost',
+  port: '3306',
   dialect: 'mysql',
   define: {
     timestamps: false

@@ -2,10 +2,10 @@ import Sequelize from 'sequelize';
 
 
 // console.log(process.env.BD_NOMBRE);
-const db = new Sequelize('agenciaViajes', 'root', 'bryangomez2021',{
+const db = new Sequelize('agenciaViajes', 'bryanJ', 'bryan98Gomez',{
         
-    host: 'captain.servicios.saynets.com',
-    port: '6969',
+    host: 'localhost',
+    port: '3306',
     dialect: 'mysql',
     define: {
             timestamps:false
