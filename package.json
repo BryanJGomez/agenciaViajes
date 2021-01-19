@@ -4,13 +4,8 @@
   "description": "aprendiendo nodejs",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "dev": "nodemon ./index.js",
-    "start": "node server"
-=======
-    "dev": "nodemon server",
     "start": "node ./index.js"
->>>>>>> a45776b569e5328c7aed4915ed77357f6641662a
   },
   "type": "module",
   "author": "bryan gomez",
