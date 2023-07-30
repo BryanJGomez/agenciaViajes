@@ -1,11 +1,18 @@
 import Sequelize from 'sequelize';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const dbName = process.env.BD_NOMBRE;
+const dbUser = process.env.BD_USER;
+const dbPassword = process.env.BD_PASS;
+const dbHost = process.env.BD_HOST;
+const dbPort = process.env.BD_PORT;
 
 
-// console.log(process.env.BD_NOMBRE);
-const db = new Sequelize('agenciaViajes', 'desarrollo', 'bryangomez2021',{
+const db = new Sequelize(dbName, dbUser, dbPassword,{
         
-    host: 'captain.servicios.saynets.com',
-    port: 6969,
+    host: dbHost,
+    port: dbPort,
     dialect: 'mysql',
     define: {
             timestamps:false
